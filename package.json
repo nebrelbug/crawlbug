@@ -13,7 +13,7 @@
     "web",
     "internet"
   ],
-  "author": "Ben Gubler",
+  "author": "Ben Gubler <nebrelbug@gmail.com> (https://bengubler.com)",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
