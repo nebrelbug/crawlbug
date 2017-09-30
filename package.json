@@ -1,6 +1,6 @@
 {
   "name": "crawlbug",
-  "version": "3.1.10",
+  "version": "4.0.0",
   "description": "A NodeJS crawler that can be deployed to multiple machines and writes page data to a Firebase database.",
   "main": "main.js",
   "scripts": {
