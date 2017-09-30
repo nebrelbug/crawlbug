@@ -22,5 +22,13 @@
     "request": "^2.83.0",
     "url-parse": "^1.1.9"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebrelbug/crawlbug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nebrelbug/crawlbug/issues"
+  },
+  "homepage": "https://github.com/nebrelbug/crawlbug#readme"
 }
