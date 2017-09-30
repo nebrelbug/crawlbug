@@ -1,0 +1,26 @@
+{
+  "name": "crawlbug",
+  "version": "3.1.10",
+  "description": "A NodeJS crawler that can be deployed to multiple machines and writes page data to a Firebase database.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "crawler",
+    "spider",
+    "crawlbug",
+    "web",
+    "internet"
+  ],
+  "author": "Ben Gubler",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "firebase": "^4.1.3",
+    "firebase-admin": "^5.1.0",
+    "request": "^2.81.0",
+    "url-parse": "^1.1.9"
+  },
+  "devDependencies": {}
+}
