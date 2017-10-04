@@ -9,7 +9,9 @@ Basic use:
 Require crawlbug
 
 ```
+
 var crawlbug = require("crawlbug");
+
 ```
 
 Start a crawl
@@ -24,20 +26,23 @@ crawlbug.config({
     storageBucket: "probablysomethingelse.appspot.com",
     messagingSenderId: "numbers"
 });
+
 ```
 
 This allows the crawler to write crawl data to your database. Run a database test to see if it is working:
 ```
 
 crawlbug.databaseTest();
+
 ```
-Then set paths for the crawl data (finished site data, sites to visit data) and start a crawl with ( a root url, whether you're crawling for only unique base URLs, and whether you want to crawl relative links.)
+Then set paths for the crawl data (finished site data, sites to visit data) and start a crawl with ( a root url, whether you're crawling for only unique base URLs, whether you want to crawl relative links, maxUrlNumber)
 
 ```
 
 exports.pathSet("sites", "sitesToVisit");
 
 exports.spider("https://google.com", false, false);
+
 ```
 
 Have fun!
