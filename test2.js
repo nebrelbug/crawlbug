@@ -268,3 +268,23 @@ exports.spider = function(startUrl, baseOnly, relativeLinksTrueParam, maxNumberP
     exports.queueSiteIfNotContained(startUrl, baseOnly);
     exports.getNextSite(baseOnly);
 };
+
+
+/*TEST*/
+exports.config({
+    apiKey: "AIzaSyAiIgGi_SSYcmtfXM4jJqsg2YOCShoymUg",
+    authDomain: "search-engine-51a48.firebaseapp.com",
+    databaseURL: "https://search-engine-51a48.firebaseio.com",
+    projectId: "search-engine-51a48",
+    storageBucket: "search-engine-51a48.appspot.com",
+    messagingSenderId: "571504129898"
+});
+
+exports.databaseTest();
+
+exports.pathSet("sites", "sitesToVisit");
+
+
+exports.spider("https://google.com", false, false, 1000);
+
+//getNextSite(false);
