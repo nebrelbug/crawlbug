@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "node"
 before_script:
-  - npm install uglify-js -g
-script: uglifyjs --beautify -- main.js
+  - npm install eslint -g
+script: eslint main.js

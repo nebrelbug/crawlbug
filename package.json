@@ -16,14 +16,14 @@
   "author": "Ben Gubler <nebrelbug@gmail.com> (https://bengubler.com)",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.5.0",
     "cheerio": "^1.0.0-rc.2",
     "firebase": "^4.4.0",
-    "firebase-admin": "^5.3.0",
     "request": "^2.83.0",
     "url-parse": "^1.1.9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "coveralls": "^3.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nebrelbug/crawlbug.git"
