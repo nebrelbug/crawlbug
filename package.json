@@ -22,7 +22,8 @@
     "url-parse": "^1.1.9"
   },
   "devDependencies": {
-    "coveralls": "^3.0.0"
+    "coveralls": "^3.0.0",
+    "eslint": "^4.8.0"
   },
   "repository": {
     "type": "git",
