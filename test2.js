@@ -65,7 +65,7 @@ exports.siteContained =   function(url, baseOnly) {
     var inputUrlHostname = inputUrl.hostname;
     var inputUrlHostnameKey = inputUrlHostname.replace(/\./g, '-');
     var inputUrlPath = inputUrl.pathname;
-    var inputUrlPathKey = inputUrlPath.replace(/\//g, '-');
+    var inputUrlPathKey = inputUrlPath.replace(/\/|\./g, '-');
     sitesRef.once("value")
         .then(function(snapshot) {
             if (baseOnly) {
@@ -94,7 +94,7 @@ exports.siteToVisitContained = function(url, baseOnly) {
     var inputUrlHostname = inputUrl.hostname;
     var inputUrlHostnameKey = inputUrlHostname.replace(/\./g, '-');
     var inputUrlPath = inputUrl.pathname;
-    var inputUrlPathKey = inputUrlPath.replace(/\//g, '-');
+    var inputUrlPathKey = inputUrlPath.replace(/\/|\./g, '-');
     sitesToVisitRef.once("value")
         .then(function(snapshot) {
             if (baseOnly) {
@@ -124,7 +124,7 @@ exports.queueSiteIfNotContained = function(url, baseOnly) {
     var inputUrlHostname = inputUrl.hostname;
     var inputUrlHostnameKey = inputUrlHostname.replace(/\./g, '-');
     var inputUrlPath = inputUrl.pathname;
-    var inputUrlPathKey = inputUrlPath.replace(/\//g, '-');
+    var inputUrlPathKey = inputUrlPath.replace(/\/|\./g, '-');
     if (!exports.siteToVisitContained(url, baseOnly)) {
         if (!exports.siteContained(url, baseOnly)) {
              sitesToVisitRef.child(inputUrlHostnameKey + "/" + inputUrlPathKey).set({
@@ -145,8 +145,7 @@ exports.collectInternalLinks =   function($, baseOnly, baseUrl) {
       if(relativeLinksTrue) {
           relativeLinks.each(function() {
             var href = $(this).attr('href');
-            var modifiedHref = href.replace(/\./g, '-')
-            exports.queueSiteIfNotContained(baseUrl + modifiedHref);
+            exports.queueSiteIfNotContained(baseUrl + href);
 
         });
       }
@@ -155,8 +154,7 @@ exports.collectInternalLinks =   function($, baseOnly, baseUrl) {
     var absoluteLinks = $("a[href^='http']");
     absoluteLinks.each(function() {
         var href = $(this).attr('href');
-            var modifiedHref = href.replace(/\./g, '-')
-            exports.queueSiteIfNotContained(baseUrl + modifiedHref);
+        exports.queueSiteIfNotContained(href);
     });
 
 }; /*End of Queue Internal Links Function*/
@@ -170,7 +168,7 @@ exports.getSite =  function(url, baseOnly) {
     var inputUrlHostname = inputUrl.hostname;
     var inputUrlHostnameKey = inputUrlHostname.replace(/\./g, '-');
     var inputUrlPath = inputUrl.pathname;
-    var inputUrlPathKey = inputUrlPath.replace(/\//g, '-');
+    var inputUrlPathKey = inputUrlPath.replace(/\/|\./g, '-');
     var baseUrl = inputUrl.protocol + "//" + inputUrl.hostname;
     request(url, function(error, response, body) {
         console.log('error:', error); // Print the error if one occurred
