@@ -1,6 +1,5 @@
 # Crawlbug
 [![Build Status](https://travis-ci.org/nebrelbug/crawlbug.svg?branch=master)](https://travis-ci.org/nebrelbug/crawlbug)
-[![Coverage Status](https://coveralls.io/repos/github/nebrelbug/crawlbug/badge.svg?branch=master)](https://coveralls.io/github/nebrelbug/crawlbug?branch=master)
 
 Crawlbug is a web-crawler NPM module that is designed to be integrated with a Firebase realtime database. Though this was mainly a project for myself, feel free to contact me if you'd like to contribute.
 
