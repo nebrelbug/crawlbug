@@ -18,7 +18,7 @@ var sitesToVisitRefPath;
 exports.config =   function(config) {
     firebase.initializeApp(config);
     database = firebase.database();
-}
+};
 
 /*The pathSet function*/
 exports.pathSet =   function(sites, sitesToVisit) {
@@ -132,7 +132,7 @@ exports.queueSiteIfNotContained = function(url, baseOnly) {
             });
         }
     }
-}
+};
 
 
 /*Queue Internal Links Function*/
