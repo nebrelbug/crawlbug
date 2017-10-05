@@ -4,7 +4,7 @@
   "description": "A NodeJS web crawler that can be deployed to multiple machines and writes page data to a Firebase database.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/jshint/bin/jshint main.js"
   },
   "keywords": [
     "crawler",
@@ -22,7 +22,8 @@
     "url-parse": "^1.1.9"
   },
   "devDependencies": {
-    "coveralls": "^3.0.0"
+    "coveralls": "^3.0.0",
+    "jshint": "^2.9.5"
   },
   "repository": {
     "type": "git",
