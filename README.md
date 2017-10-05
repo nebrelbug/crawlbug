@@ -1,5 +1,10 @@
 # Crawlbug
 [![Build Status](https://travis-ci.org/nebrelbug/crawlbug.svg?branch=master)](https://travis-ci.org/nebrelbug/crawlbug)
+[![dependencies Status](https://david-dm.org/nebrelbug/crawlbug/status.svg)](https://david-dm.org/nebrelbug/crawlbug)
+[![npm version](https://img.shields.io/npm/v/crawlbug.svg)](https://www.npmjs.com/package/crawlbug)
+[![npm downloads](https://img.shields.io/npm/dt/crawlbug.svg)](https://www.npmjs.com/package/crawlbug)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/nebrelbug/crawlbug.svg)](https://github.com/nebrelbug/crawlbug)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/33bf9811125c493f9808050e2499c9c6)](https://www.codacy.com/app/nebrelbug/crawlbug?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nebrelbug/crawlbug&amp;utm_campaign=Badge_Grade)
 
 Crawlbug is a web-crawler NPM module that is designed to be integrated with a Firebase realtime database. Though this was mainly a project for myself, feel free to contact me if you'd like to contribute.
 
